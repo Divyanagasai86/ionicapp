@@ -29,7 +29,7 @@ import Signup from './pages/Signup';
 
 
 
-setupIonicReact();
+setupIonicReact(); 
 
 const App: React.FC = () => (
   <AuthContextProvider>

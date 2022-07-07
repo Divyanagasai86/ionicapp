@@ -4,20 +4,7 @@ import './Dashboard.css';
 const Dashboard = () => {
 
 
-    // async function handleButtonClick(message) {
-    //   const toast = await toastController.create({
-    //       color:"light",
-    //       duration: 2000,
-    //       position: "top",
-    //       message: message,
-    //       showCloseButton: true,
-    //   });
-
-    //   await toast.present();
-    // }
-
-
-
+    
     return (
         <IonPage>
             <IonContent fullscreen className="content-page">
