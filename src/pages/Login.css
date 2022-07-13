@@ -106,4 +106,21 @@
 
 .loginpage-alert{
     --background: white;
+    color: black;
 }
+
+.icons{
+    display: flex;
+    justify-content: center;
+}
+
+.google{
+    height: 45px;
+    width: 35px;
+    padding: 20px;
+}
+
+.lp-sp-spinner{
+    color: "light";
+}
+   
