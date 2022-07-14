@@ -25,6 +25,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { AuthContextProvider } from './context/AuthContext';
 import Dashboard from './pages/Dashboard';
+import Find from './pages/Find';
 import Signup from './pages/Signup';
 
 import {Browser} from '@capacitor/browser';
@@ -132,15 +133,9 @@ return (
         <Route exact path="/Home">
           <Home />
         </Route>
-        {/* <Route exact path="/">
-           <Redirect to="/Login"/>
-        </Route> */}
         <Route exact path="/Login">
             <Login/>
         </Route>
-        {/* <Route exact path="/SignUp">
-           <Redirect to="/SignUp"/>
-        </Route> */}
         <Route exact path="/SignUp">
             <Signup />
         </Route>
@@ -149,6 +144,9 @@ return (
         </Route>
         <Route exact path="/Dashboard">
           <Dashboard />
+        </Route>
+        <Route exact path="/Find">
+          <Find />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

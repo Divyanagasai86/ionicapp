@@ -1,18 +1,18 @@
 import {
-    IonContent, IonPage, IonTitle, IonInput, IonLabel,
+    IonContent, IonPage, IonInput, IonLabel,
     IonButton, IonGrid, IonRow, useIonRouter,
-    IonCol, useIonAlert, useIonToast, IonLoading,useIonLoading
+    IonCol, useIonAlert, useIonToast,useIonLoading
 }
     from "@ionic/react";
 import './Signup.css';
 import { useState } from 'react';
 import { UserAuth } from '../context/AuthContext';
-import { toastController } from '@ionic/core';
+
 import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
-    const [present, dismiss] = useIonToast();
+    const [present] = useIonToast();
     const [showLoading, dimissLoading] = useIonLoading();
 
 
@@ -33,7 +33,7 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const { createUser, currentUser } = UserAuth();
+    const { createUser,  } = UserAuth();
 
     const router = useIonRouter();
 
@@ -143,10 +143,6 @@ const Signup = () => {
 
             </IonContent>
         </IonPage>
-
     )
 };
-
-
-
 export default Signup;
