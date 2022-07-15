@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "677665023154",
+    "project_id": "dictionaryapps-3c6cb",
+    "storage_bucket": "dictionaryapps-3c6cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677665023154:android:964606e9291765cb15d5ab",
+        "android_client_info": {
+          "package_name": "com.dictionaryapp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677665023154-dd2bdn3sinevo5kfkf0ek8p71hc8ulif.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dictionaryapp.app",
+            "certificate_hash": "3d9b2b243462461a9081dac1e0001bab54eb8c5e"
+          }
+        },
+        {
+          "client_id": "677665023154-otkc8oq6583perpbi0omr19erq8ce123.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw8Vt_kzE2crzgu4bVaTp6QI9Nkembp2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677665023154-otkc8oq6583perpbi0omr19erq8ce123.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,4 +4,5 @@
     <string name="title_activity_main">dictionaryapp</string>
     <string name="package_name">com.dictionaryapp.app</string>
     <string name="custom_url_scheme">com.dictionaryapp.app</string>
+    <string name="server_client_id">677665023154-otkc8oq6583perpbi0omr19erq8ce123.apps.googleusercontent.com</string>
 </resources>

@@ -2,7 +2,7 @@
 import {
     IonContent, IonPage, IonTitle, IonInput, IonLabel,
     IonButton, IonGrid, IonRow, useIonRouter, IonCol, IonIcon, IonLoading,
-    useIonAlert, useIonToast,useIonLoading
+    useIonAlert, useIonToast, useIonLoading
 } from "@ionic/react";
 import { Link } from 'react-router-dom';
 import { logoGoogle, logoFacebook } from 'ionicons/icons';
@@ -11,6 +11,8 @@ import './Login.css';
 
 import { UserAuth } from '../context/AuthContext';
 import { toastController } from '@ionic/core';
+import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
+
 
 
 const Login = () => {
@@ -18,9 +20,9 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const [present,dismiss] = useIonToast();
+    const [present, dismiss] = useIonToast();
     const [presentAlert] = useIonAlert();
-    const [showLoading,dimissLoading] = useIonLoading();
+    const [showLoading, dimissLoading] = useIonLoading();
 
     async function handleButtonClick(message) {
         present({
@@ -53,6 +55,24 @@ const Login = () => {
         setPassword('');
 
     }
+    const signInGoogle = async () => {
+
+        GoogleAuth.initialize();
+
+        const result = await GoogleAuth.signIn();
+
+
+
+        console.log(result);
+
+        if (result) {
+            router.push("/Dashboard");
+            console.log(result);
+        }
+
+    }
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -76,7 +96,7 @@ const Login = () => {
                     duration: 3000,
                     cssClass: 'loginpage-alert',
                     color: 'dark'
-                  })
+                })
                 await login(email, password);
                 handleButtonClick("user logged in successful");
                 dimissLoading();
@@ -138,10 +158,21 @@ const Login = () => {
                     </IonRow>
                     <IonRow className="icons">
 
-                        <IonIcon style={{ fontSize: "20px" }} icon={logoGoogle} color="light" className="google"></IonIcon>
-                        <IonIcon style={{ fontSize: "20px" }} icon={logoFacebook} color="light" className="google"></IonIcon>
+                        <IonButton fill="clear" onClick={(e) => { signInGoogle() }} >
+                            <IonIcon
+                                icon={logoGoogle}
+                                color="white"
+                                className="google" 
+                            />
+                        </IonButton>
 
-
+                        <IonButton fill="clear"  >
+                            <IonIcon
+                                icon={logoFacebook }
+                                color="white"
+                                className="google" 
+                            />
+                        </IonButton>
                     </IonRow>
 
                 </IonGrid>

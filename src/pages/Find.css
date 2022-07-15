@@ -26,3 +26,7 @@
 .card-content{
     --background:#272333!important;
 }
+
+.dash-btn{
+    --background: #953CCF;
+}

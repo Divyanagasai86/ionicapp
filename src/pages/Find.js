@@ -1,6 +1,6 @@
 import {
     IonToolbar, IonCardTitle, IonInfiniteScroll, useIonViewWillEnter,
-    IonInfiniteScrollContent, IonCard, IonGrid, IonRow, IonCol, IonSearchbar,  IonContent,  IonPage, IonCardContent, IonCardSubtitle, IonIcon
+    IonInfiniteScrollContent, IonCard, IonGrid, IonRow, IonCol, IonSearchbar,  IonContent,  IonPage, IonCardContent, IonCardSubtitle, IonButton
 } from "@ionic/react";
 import './Find.css';
 import { menu } from 'ionicons/icons';
@@ -265,16 +265,11 @@ const Find = () => {
         <IonPage>
             <IonToolbar className="toolbar-top " color="dark">
                 <IonRow className="first-row ion-justify-content-between ion-padding">
-                    <IonCol size="10" sizeSm="10" sizeMd="11.5">
+                    <IonCol size="10" sizeSm="10" sizeMd="11">
                         <IonSearchbar className="ion-padding"></IonSearchbar>
                     </IonCol>
                     <IonCol size="2" sizeSm="2" sizeMd="0.5" className="menu-icon">
-                        <IonIcon
-                            icon={menu}
-                            className="ion-jutify-content-center ion-padding"
-                            style={{ float: "right", fontSize: "20px" }}
-                            color="warning"
-                        ></IonIcon>
+                        <IonButton routerLink="/Login" className="dash-btn">Logout</IonButton>
                     </IonCol>
                 </IonRow>
             </IonToolbar>
