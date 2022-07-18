@@ -3,7 +3,7 @@ import { IonApp, IonRouterOutlet, isPlatform, setupIonicReact, useIonAlert, useI
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Login from './pages/Login';
-
+import Profile from './pages/Profile';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -147,6 +147,9 @@ return (
         </Route>
         <Route exact path="/Find">
           <Find />
+        </Route>
+        <Route exact path="/Profile">
+          <Profile />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
