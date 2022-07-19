@@ -1,0 +1,25 @@
+.content-page{
+    
+    --background:#1e1b27!important;
+    /* display: flex;
+    justify-content:center; */
+    height: 100%;
+    
+}
+
+
+.close-btn{
+    --background:#953cd0;
+}
+
+.card-head{
+    --background:#272333;
+}
+
+.content{
+    --background:#953cd0;
+}
+
+.play_btn{
+    --background:#953cd0;
+}
