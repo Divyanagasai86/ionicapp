@@ -3,7 +3,7 @@ import { IonApp, IonRouterOutlet, isPlatform, setupIonicReact, useIonAlert, useI
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Profile from './pages/Profile';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -25,7 +25,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { AuthContextProvider } from './context/AuthContext';
 import Dashboard from './pages/Dashboard';
-import Find from './pages/Find';
+
 import Signup from './pages/Signup';
 
 import {Browser} from '@capacitor/browser';
@@ -144,12 +144,6 @@ return (
         </Route>
         <Route exact path="/Dashboard">
           <Dashboard />
-        </Route>
-        <Route exact path="/Find">
-          <Find />
-        </Route>
-        <Route exact path="/Profile">
-          <Profile />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
