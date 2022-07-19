@@ -73,7 +73,6 @@ const Login = () => {
     }
 
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         var atposition = email.indexOf("@");

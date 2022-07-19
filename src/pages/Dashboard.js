@@ -32,7 +32,7 @@ const Dashboard = () => {
                                 <IonCardContent >
                                     <IonCardTitle className="dash-title1">Did you know?</IonCardTitle>
                                     <p>There are 171, 146 words in the English language!</p>
-                                    <IonButton expand="block" className=" dash-btn ion-margin-top">Search now &rarr;</IonButton>
+                                    <IonButton expand="block" className=" dash-btn ion-margin-top" routerLink="/Find">Search now &rarr;</IonButton>
                                 </IonCardContent>
                             </IonCard>
                         </IonCol>

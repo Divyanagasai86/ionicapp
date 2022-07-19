@@ -26,7 +26,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { AuthContextProvider } from './context/AuthContext';
 import Dashboard from './pages/Dashboard';
-// import Find from './pages/Find';
+ import Find from './pages/Find';
 import Signup from './pages/Signup';
 
 import {Browser} from '@capacitor/browser';
@@ -146,9 +146,9 @@ return (
         <Route exact path="/Dashboard">
           <Dashboard />
         </Route>
-        {/* <Route exact path="/Find">
+        <Route exact path="/Find">
           <Find />
-        </Route> */}
+        </Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
