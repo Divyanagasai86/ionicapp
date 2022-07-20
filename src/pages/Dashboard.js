@@ -1,7 +1,7 @@
-import { IonContent, IonPage, IonRow, IonGrid, IonLabel, IonTabButton, IonIcon, IonTabBar, IonCard, IonCardContent, IonCardTitle, IonCol, IonHeader,
+import { IonContent, IonPage, IonRow, IonGrid, IonTabButton, IonIcon, IonTabBar, IonCard, IonCardContent, IonCardTitle, IonCol, IonHeader,
      IonToolbar,IonCardSubtitle, IonTitle, IonButton } from "@ionic/react";
 import './Dashboard.css';
-import { bookOutline, ellipse, heart, search, square, statsChart, statsChartOutline, triangle } from 'ionicons/icons';
+import { bookOutline, heart, search, statsChart} from 'ionicons/icons';
 
 const Dashboard = () => {
 

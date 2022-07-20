@@ -1,7 +1,7 @@
 
 import {
-    IonContent, IonPage, IonTitle, IonInput, IonLabel,
-    IonButton, IonGrid, IonRow, useIonRouter, IonCol, IonIcon, IonLoading,
+    IonContent, IonPage, IonInput, IonLabel,
+    IonButton, IonGrid, IonRow, useIonRouter, IonCol, IonIcon,
     useIonAlert, useIonToast, useIonLoading
 } from "@ionic/react";
 import { Link } from 'react-router-dom';
@@ -10,17 +10,16 @@ import { useState } from "react";
 import './Login.css';
 
 import { UserAuth } from '../context/AuthContext';
-import { toastController } from '@ionic/core';
 import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 
 
 
 const Login = () => {
-    const { login, user } = UserAuth();
+    const { login } = UserAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
-    const [present, dismiss] = useIonToast();
+    const [ setError] = useState("");
+    const [present] = useIonToast();
     const [presentAlert] = useIonAlert();
     const [showLoading, dimissLoading] = useIonLoading();
 

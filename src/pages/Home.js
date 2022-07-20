@@ -1,5 +1,5 @@
-import { IonButton, IonContent, IonGrid, IonRow, IonImg, IonPage, IonTitle, IonToolbar,IonLoading } from '@ionic/react';
-import { useState } from "react";
+import { IonButton, IonContent, IonGrid, IonRow, IonPage, IonTitle } from '@ionic/react';
+
 import './Home.css';
 
 
