@@ -71,14 +71,14 @@ const Signup = () => {
         } else {
             try {
                 showLoading({
-                    message: 'Dismissing after sometimes...',
+                    message: 'Please Wait...',
                     duration: 3000,
                     cssClass: 'loginpage-alert',
                     color: 'dark'
                 })
                 await createUser(email, password);
                 dimissLoading();
-                handleButtonClick(name + " " + "user successfully signedup");
+                handleButtonClick("user successfully signedup");
                 clearInputs();
                 router.push("/login")
             } catch (e) {

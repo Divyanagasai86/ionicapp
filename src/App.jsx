@@ -114,10 +114,8 @@ const App = () => {
 
   useEffect(() => {
     getConfigData();
-    getAppInfo();
+    checkUpdate();
   }, []);
-
-  checkUpdate();
 
 
   return (
