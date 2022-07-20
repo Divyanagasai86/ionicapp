@@ -29,19 +29,19 @@ import Dashboard from './pages/Dashboard';
 // import Find from './pages/Find';
 import Signup from './pages/Signup';
 
-import {Browser} from '@capacitor/browser';
+import { Browser } from '@capacitor/browser';
 import { App as app } from '@capacitor/app';
-import {useEffect, useState} from 'react';
-import { collection, doc, getDoc, setDoc } from "firebase/firestore"; 
-import {db} from './firebase';
+import { useEffect, useState } from 'react';
+import { collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from './firebase';
 
 setupIonicReact();
 
 const App = () => {
-  const [updateDetails,setUpdateDetails] = useState({});
+  const [updateDetails, setUpdateDetails] = useState({});
   const [appVersion, setAppVersion] = useState("");
-  const updateRef= doc(db, "dictionary_app_config",
-  "DpOAil0XVLlVegkfPcsn");
+  const updateRef = doc(db, "dictionary_app_config",
+    "DpOAil0XVLlVegkfPcsn");
 
   const [presentAlert] = useIonAlert();
   const [present] = useIonToast();
@@ -53,22 +53,22 @@ const App = () => {
       animated: true,
       duration: 2000,
       color: "white",
-      mode:'ios',
+      mode: 'ios',
     });
   };
 
   const handleAlert = (msg, title, btn, appVersion) => {
     presentAlert({
-      header:title,
-      subHeader:`Version: ${appVersion}`,
+      header: title,
+      subHeader: `Version: ${appVersion}`,
       message: msg,
       buttons: [
         {
           text: btn,
-          role:"Download",
+          role: "Download",
           handler: async () => {
             handleToast("Download Clicked");
-            await Browser.open ({
+            await Browser.open({
               url: "https://play.google.com/store/apps/details?id=com.dictionaryapp.app",
             });
           },
@@ -86,15 +86,13 @@ const App = () => {
   };
 
   const getConfigData = async () => {
-       const docSnap = await getDoc(updateRef);
-       if(docSnap.exists()) {
-        const data = docSnap.data();
-        console.log("Document data:" , docSnap.data());
-        setUpdateDetails(data.UpdateMsg);
-        setAppVersion(data.current);
-       }else{
-        console.log("No such document!");
-       }
+    const docSnap = await getDoc(updateRef);
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      setUpdateDetails(data.UpdateMsg);
+      setAppVersion(data.current);
+    } else {
+    }
   };
 
   const checkUpdate = async () => {
@@ -107,8 +105,8 @@ const App = () => {
           const btn = updateDetails.btn;
           handleAlert(msg, title, btn, appVersion);
         }
-      } 
-    } 
+      }
+    }
     catch (error) {
       handleAlert(error.message);
     }
@@ -117,43 +115,36 @@ const App = () => {
   useEffect(() => {
     getConfigData();
     getAppInfo();
-    // if (isPlatform("android")){
-      
-    // }
   }, [0]);
 
-    checkUpdate();
+  checkUpdate();
 
 
-
-return (
-  <AuthContextProvider>
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/Home">
-          <Home />
-        </Route>
-        <Route exact path="/Login">
-            <Login/>
-        </Route>
-        <Route exact path="/SignUp">
-            <Signup />
-        </Route>
-        <Route exact path="/">
-           <Redirect to="/Home"/>
-        </Route>
-        <Route exact path="/Dashboard">
-          <Dashboard />
-        </Route>
-        {/* <Route exact path="/Find">
-          <Find />
-        </Route> */}
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-  </AuthContextProvider>
-);
-      }
+  return (
+    <AuthContextProvider>
+      <IonApp>
+        <IonReactRouter>
+          <IonRouterOutlet>
+            <Route exact path="/Home">
+              <Home />
+            </Route>
+            <Route exact path="/Login">
+              <Login />
+            </Route>
+            <Route exact path="/SignUp">
+              <Signup />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/Home" />
+            </Route>
+            <Route exact path="/Dashboard">
+              <Dashboard />
+            </Route>
+          </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    </AuthContextProvider>
+  );
+}
 export default App;
 
