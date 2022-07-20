@@ -115,6 +115,7 @@ const App = () => {
   useEffect(() => {
     getConfigData();
     checkUpdate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
