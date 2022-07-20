@@ -46,12 +46,12 @@ export const WordCard = ({ word, animatedClass, pageRef }) => {
             <IonRow className="ion-padding-top ion-align-items-center ion-justify-content-center ion-text-center">
               <IonCol size="6">
                 <IonCardTitle color="light">{ word.meanings.length }</IonCardTitle>
-                <IonCardSubtitle>meanings</IonCardSubtitle>
+                <IonCardSubtitle color="light">meanings</IonCardSubtitle>
               </IonCol>
 
               <IonCol size="6">
                 <IonCardTitle color="light">{ word.phonetics.length }</IonCardTitle>
-                <IonCardSubtitle>phonetics</IonCardSubtitle>
+                <IonCardSubtitle color="light">phonetics</IonCardSubtitle>
               </IonCol>
               {/* <IonCol size="4">
                 <IonCardTitle>

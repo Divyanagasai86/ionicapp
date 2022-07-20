@@ -8,7 +8,7 @@ const Dashboard = () => {
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar color="dark">
+                <IonToolbar color="grey">
                     <IonTitle color="white">Dashboard</IonTitle>
                 </IonToolbar>
             </IonHeader>
@@ -62,7 +62,7 @@ const Dashboard = () => {
 
                 </IonGrid>
             </IonContent>
-            <IonTabBar slot="bottom" color="dark">
+            <IonTabBar slot="bottom" color="grey">
                 <IonTabButton tab="dashboard" href="/dashboard" className="icon-color">
                     <IonIcon icon={statsChart} />
                 </IonTabButton>

@@ -29,9 +29,9 @@ const Find = () => {
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar className="toolbar-top " color="dark">
+                <IonToolbar className="toolbar-top " color="grey">
                     <IonRow>
-                        <IonTitle>Search</IonTitle>
+                        <IonTitle className="head">Search</IonTitle>
                         <IonAvatar>
                             <IonImg
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjgzOoeWAe9w4YTYMye3LNwVWU2QVptuu07w&usqp=CAU"

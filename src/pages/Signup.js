@@ -71,7 +71,7 @@ const Signup = () => {
         } else {
             try {
                 showLoading({
-                    message: 'Dismissing after sometimes...',
+                    message: 'Signing up please wait...',
                     duration: 3000,
                     cssClass: 'loginpage-alert',
                     color: 'dark'

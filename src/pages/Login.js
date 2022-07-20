@@ -91,7 +91,7 @@ const Login = () => {
         } else {
             try {
                 showLoading({
-                    message: 'Dismissing after sometime...',
+                    message: 'Logging in please Wait....',
                     duration: 3000,
                     cssClass: 'loginpage-alert',
                     color: 'dark'
