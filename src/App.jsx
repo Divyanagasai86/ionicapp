@@ -32,7 +32,7 @@ import Signup from './pages/Signup';
 import { Browser } from '@capacitor/browser';
 import { App as app } from '@capacitor/app';
 import { useEffect, useState } from 'react';
-import { collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 import { db } from './firebase';
 
 setupIonicReact();
@@ -115,7 +115,7 @@ const App = () => {
   useEffect(() => {
     getConfigData();
     getAppInfo();
-  }, [0]);
+  }, []);
 
   checkUpdate();
 
